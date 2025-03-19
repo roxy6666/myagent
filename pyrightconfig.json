@@ -1,0 +1,29 @@
+{
+  "include": [
+    "ability",
+    "tests"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "build",
+    "dist"
+  ],
+  "ignore": [],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.7",
+  "typeCheckingMode": "strict",
+  "useLibraryCodeForTypes": true,
+  "reportPrivateUsage": "warning",
+  "reportUnknownArgumentType": "warning",
+  "reportUnknownMemberType": "warning",
+  "reportUnknownParameterType": "warning",
+  "reportUnknownVariableType": "warning",
+  "reportMissingTypeArgument": "warning",
+  "reportInvalidTypeVarUse": "warning",
+  "strictListInference": true,
+  "strictDictionaryInference": true,
+  "strictSetInference": true,
+  "analyzeUnannotatedFunctions": true
+} 

@@ -1,0 +1,12 @@
+web3>=5.28.0
+requests>=2.25.0
+hexbytes>=0.2.0
+typing-extensions>=4.0.0
+pytest>=7.0.0
+pytest-cov>=2.12.0
+mypy>=0.910
+black>=22.1.0
+# Optional dependencies for improved decompilation
+# These packages aren't required but will enhance decompilation if installed
+pyevmasm>=0.2.3  # For improved opcode disassembly 
+eth-abi>=2.1.1
