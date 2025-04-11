@@ -128,3 +128,7 @@ dmypy.json
 node_modules/
 *.swp
 *.swo 
+states/
+tenderly/
+simres*
+ttt*

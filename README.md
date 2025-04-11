@@ -15,6 +15,17 @@
 1. 帮我做好必要的测试。
 2. 配置好 Pyright 我特别喜欢静态类型。 
 
+## 重要JSONPath 
+
+.transaction.transaction_info.state_diff 可以知道 StateSlot 的变化
+.transaction.addresses 这里有涉及到的地址, 但是有交易发起的, 还有Null 的可能要注意过滤. 
+    功能需求: 要通过地址找到反编译的合约代码, 因为函数名字是 4byte 的function selector 别忘了随便给个名字.
+.contracts 是Verified合约的描述, 还有源代码. 
+
+## 一个比较临时的决策
+
+Verified 合约源代码+slot变化就可以做的不错了.速度快还节省Token
+
 # Ability Package
 
 A Python package for analyzing blockchain transactions and smart contracts.

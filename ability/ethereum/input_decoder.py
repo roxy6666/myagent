@@ -16,28 +16,28 @@ class InputDecoder:
         self.abi_codec = ABICodec(registry)
         # 常见的函数选择器映射
         self.function_selectors = {
-            "0xa9059cbb": {
-                "name": "transfer",
-                "inputs": [
-                    {"type": "address", "name": "recipient"},
-                    {"type": "uint256", "name": "amount"}
-                ]
-            },
-            "0x6a761202": {
-                "name": "execTransaction",
-                "inputs": [
-                    {"type": "address", "name": "to"},
-                    {"type": "uint256", "name": "value"},
-                    {"type": "bytes", "name": "data"},
-                    {"type": "uint8", "name": "operation"},
-                    {"type": "uint256", "name": "safeTxGas"},
-                    {"type": "uint256", "name": "baseGas"},
-                    {"type": "uint256", "name": "gasPrice"},
-                    {"type": "address", "name": "gasToken"},
-                    {"type": "address", "name": "refundReceiver"},
-                    {"type": "bytes", "name": "signatures"}
-                ]
-            }
+            # "0xa9059cbb": {
+            #     "name": "transfer",
+            #     "inputs": [
+            #         {"type": "address", "name": "recipient"},
+            #         {"type": "uint256", "name": "amount"}
+            #     ]
+            # },
+            # "0x6a761202": {
+            #     "name": "execTransaction",
+            #     "inputs": [
+            #         {"type": "address", "name": "to"},
+            #         {"type": "uint256", "name": "value"},
+            #         {"type": "bytes", "name": "data"},
+            #         {"type": "uint8", "name": "operation"},
+            #         {"type": "uint256", "name": "safeTxGas"},
+            #         {"type": "uint256", "name": "baseGas"},
+            #         {"type": "uint256", "name": "gasPrice"},
+            #         {"type": "address", "name": "gasToken"},
+            #         {"type": "address", "name": "refundReceiver"},
+            #         {"type": "bytes", "name": "signatures"}
+            #     ]
+            # }
         }
 
     def decode_input(self, input_data: str, contract_source: Optional[str] = None) -> Dict[str, Any]:
@@ -229,6 +229,7 @@ class InputDecoder:
                 selector_hex = encode_hex(selector)
                 
                 # 保存到函数选择器映射中
+                print("selector_hex:",selector_hex,"name:",name)
                 self.function_selectors[selector_hex] = {
                     "name": name,
                     "inputs": inputs

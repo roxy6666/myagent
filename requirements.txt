@@ -10,3 +10,5 @@ black>=22.1.0
 # These packages aren't required but will enhance decompilation if installed
 pyevmasm>=0.2.3  # For improved opcode disassembly 
 eth-abi>=2.1.1
+bottle==0.12.25
+openai>=1.1.0
